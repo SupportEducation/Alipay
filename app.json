@@ -1,9 +1,44 @@
 {
   "pages": [
+    "pages/userinfo/userinfo",
     "pages/index/index",
-    "pages/userinfo/userinfo"
+    "pages/look/look",
+    "pages/my/my",
+    "pages/news/news",
+    "pages/switchcity/switchcity",
+    "pages/program/program",
+    "pages/program2/program2"
   ],
   "window": {
-    "defaultTitle": "My App"
+    "titleBarColor": "#139aff",
+    "pullRefresh":true,
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#139aff"
+  },
+  "tabBar": {
+    "textColor": "#919799",
+    "selectedColor": "#56a8fd",
+    "backgroundColor": "#fff",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "icon": "pages/images/tar1_1.png",
+        "activeIcon": "pages/images/tar1.png",
+        "name": "首页"
+      },
+      {
+        "pagePath": "pages/look/look",
+        "icon": "pages/images/tar2.png",
+        "activeIcon": "pages/images/tar2_2.png",
+        "name": "看一看"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "icon": "pages/images/tar3.png",
+        "activeIcon": "pages/images/tar3_3.png",
+        "name": "我的"
+      }
+    ]
   }
 }
