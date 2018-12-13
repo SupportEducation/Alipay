@@ -1,0 +1,28 @@
+<view class="searchLetter touchClass">
+  <view class="thishotText" catchTap="hotCity">
+    <view style="margin-top:0;">当前</view>
+    <view style="margin-top:0;">热门</view>
+  </view>
+  <view a:for="{{searchLetter}}" style="color:#2ab4ff;font-size:20rpx;" a:key="index" data-letter="{{item.name}}" catchtouchend="clickLetter">{{item.name}}</view>
+</view>
+<block a:if="{{isShowLetter}}">
+  <view class="showSlectedLetter">    {{showLetter}}  </view>
+</block>
+<scroll-view scroll-y="true" style="height:{{winHeight}}px" onScroll="bindScroll" scroll-into-view="{{scrollTopId}}" scroll-top="{{scrollTop}}">
+  <view class="hotcity-common thisCity">当前选择城市</view>
+  <view class="thisCityName">{{city}}</view>
+  <view>
+    <text class="hotcity hotcity-common">热门城市</text>
+    <view class="weui-grids">
+      <block a:for-items="{{hotcityList}}" a:key="{{index}}">
+        <view class="weui-grid" data-cityCode="{{item.cityCode}}" data-city="{{item.city}}" catchTap="bindHotCity">
+          <view class="weui-grid__label">{{item.city}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="selection" a:for="{{cityList}}" a:key="{{item.initial}}">
+    <view class="item_letter" id="{{item.initial}}">{{item.initial}}</view>
+    <view class="item_city" a:for="{{item.cityInfo}}" a:for-item="ct" a:key="{{ct.id}}" data-cityCode="{{ct.code}}" data-city="{{ct.city}}" catchTap="bindCity">      {{ct.city}}    </view>
+  </view>
+</scroll-view>
