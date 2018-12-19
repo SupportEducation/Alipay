@@ -24,7 +24,7 @@ function TimeDifference(old){
   return data.getMonth+data.getDate+data.getDay+data.getHours+data.getMinutes+data.getSeconds
 }
 
-module.exports = {
+export default {
   formatTime: formatTime,
   TimeDifference: TimeDifference
 }  

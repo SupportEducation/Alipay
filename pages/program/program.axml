@@ -1,3 +1,94 @@
-<view>
-  New Page
+<view class='page'>
+  <view class='body'>
+    <!--搜索-->
+    <navigator url='../search/search'>
+      <view class='top'>
+        <view class='input'>
+          <text>搜索</text>
+        </view>
+      </view>
+    </navigator>
+    <!-- //顶部导航 -->
+    <view class="weui-navbar">
+      <block a:for="{{tabs}}" a:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" onTap="tabClick">
+          <view class="weui-navbar__title">{{item}}
+            <image class='im' src="../images/xj{{activeIndex == index ? '2' : ''}}.png"></image>
+          </view>
+        </view>
+      </block>
+    </view>
+    <!--隐藏部分  -->
+    <view class="weui-tab__pane">
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <view class='adr' hidden='{{!actionSheetHidden}}' onChange="actionSheetonChange">
+          <view class="searchLetter touchClass">
+            <view a:for="{{searchLetter}}" style="color:#2ab4ff;font-size:20rpx;" a:key="index" data-letter="{{item.name}}" catchtouchend="clickLetter">{{item.name}}</view>
+          </view>
+          <block a:if="{{isShowLetter}}">
+            <view class="showSlectedLetter">
+              {{showLetter}}
+            </view>
+          </block>
+          <scroll-view scroll-y="true" style="height:{{winHeight}}px" onscroll="onScroll" scroll-into-view="{{scrollTopId}}" scroll-top="{{scrollTop}}">
+            <view class="hotcity-common thisCity">当前选择城市</view>
+            <view class="thisCityName">{{city}}</view>
+            <view>
+
+            </view>
+            <view class="selection" a:for="{{cityList}}" a:key="{{item.initial}}">
+              <view class="item_letter" id="{{item.initial}}">{{item.initial}}</view>
+              <view class="item_city" a:for="{{item.cityInfo}}" a:for-item="ct" a:key="{{ct.id}}" data-cityCode="{{ct.code}}" data-city="{{ct.city}}" onTap="onCity">
+                {{ct.city}}
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        <view class='adr2' hidden='{{!actionSheetHidden}}' onChange="actionSheetonChange">
+          <radio-group onChange="radioCheckedChange">
+            <view class="flex_box">
+              <view class="flex_item">
+                <label class="{{radioCheckVal==1?'active':''}}">长期支教
+                  <radio value="1" hidden="true"></radio>
+                </label>
+              </view>
+              <view class="flex_item">
+                <label class="{{radioCheckVal==2?'active':''}}">短期支教
+                  <radio value="2" hidden="true"></radio>
+                </label>
+              </view>
+              <view class="flex_item">
+                <label class="{{radioCheckVal==3?'active':''}}">其他支教
+                  <radio value="3" hidden="true"></radio>
+                </label>
+              </view>
+            </view>
+          </radio-group>
+        </view>
+      </view>
+      <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+        <view class='adr3' hidden='{{!actionSheetHidden}}' onChange="actionSheetonChange">
+          <view class='detail4_bar' a:for="{{organization}}" a:key='' onTap='goback' data-oid='{{item.oid}}'>
+            <label>{{item.or_name}}</label>
+            <radio hidden="true"></radio>
+          </view>
+        </view>
+
+      </view>
+    </view>
+    <!--底部项目部分  -->
+    <view class='btm_nav' hidden='{{actionSheetHidden}}'>
+      <view class='view6_1' a:for="{{array}}" a:key='' onTap='v6_1' data-id='{{item.rid}}' data-oid='{{item.oid}}'>
+        <view class='detail1_bar'>
+          <view class='detail_text'>{{item.re_title}}</view>
+          <view class='detail_text2'>
+            <view class='detail_text2_1' style='width:130rpx;'> <text>截止时间：\n服务时间：\n服务地点:</text></view>
+            <text style='overflow:hidden;'>{{item.re_deadline}}\n{{item.re_servicetime}}\n{{item.re_serviceplace}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

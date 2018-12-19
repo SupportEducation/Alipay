@@ -1,0 +1,42 @@
+<!--index.wxml-->
+
+<template name="wxSearch">
+  <view class="wxSearch" onTap="wxSearchTap"  style="display:{{wxSearchData.view.isShow ? 'block':'none'}};height:{{wxSearchData.view.seachHeight}}px;top:{{wxSearchData.view.barHeight}}px;">
+    <view  class="wxSearchInner">
+        <view class="wxSearchMindKey">
+            <view class="wxSearchMindKeyList">
+                <block a:for="{{wxSearchData.mindKeys}}">
+                    <view class="wxSearchMindKeyItem" onTap="wxSearchKeyTap" data-key="{{item}}">{{item}}</view>
+                </block>
+            </view>
+        </view>
+
+        <view class="wxSearchKey" style="display:{{wxSearchData.view.isShowSearchKey ? 'block':'none'}}">
+        </view>
+        <view class="wxSearchHistory" style="display:{{wxSearchData.view.isShowSearchHistory ? 'block':'none'}}">
+            <text class="wxSearchTitle">搜索历史</text>
+            <view a:if="{{wxSearchData.his[0]}}" class="wxSearchHistoryList">
+                <block a:for="{{wxSearchData.his}}">
+                    <view class="wxSearchHistoryItem">
+                        <text class="wxSearchHistoryItemText" onTap="wxSearchKeyTap" data-key="{{item}}">{{item}}</text> 
+                        <text class="wxSearchHistoryItemDel" onTap="wxSearchDeleteKey" data-key="{{item}}" data-key="{{item}}">删除</text>
+                    </view>
+                </block>
+                <view class="wxSearchDeleteAllBtn" onTap="wxSearchDeleteAll">清除历史</view>
+            </view>
+            <view a:else>
+                <view class="wxSearchHistoryEmpty">搜索历史为空</view>
+            </view>
+        </view>
+    </view>
+  </view>
+</template>
+
+<view class="wxSearch-section">
+  <view class="wxSearch-pancel">
+    <input onInput="wxSearchInput" onFocus="wxSerchFocus" value="{{wxSearchData.value}}" onBlur="wxSearchBlur" class="wxSearch-input" placeholder="搜索" />
+    <button class="wxSearch-button" onTap="wxSearchFn" >搜索</button>
+  </view>
+</view>
+<template is="wxSearch" data="{{wxSearchData}}"/>
+

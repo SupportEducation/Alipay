@@ -1,1 +1,6 @@
-{}
+{
+  "navigationBarBackgroundColor": "#fff",
+  "titleBarColor": "black",
+  "backgroundColor": "#f3f5f9"
+  
+}

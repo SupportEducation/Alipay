@@ -1,4 +1,4 @@
 {
-  "enablePullDownRefresh": true,
-  "navigationBarTextStyle": "white"
+  "pullRefresh": true,
+  "titleBarColor": "white"
 }

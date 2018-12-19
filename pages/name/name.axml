@@ -1,0 +1,85 @@
+<!--pages/name/name.wxml-->
+<view class='body'>
+<form onSubmit='formSubmit'>
+  <view class='tar1'>
+      <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">姓名</view>
+                <input onBlur="namechange" class="weui-cell__ft weui-cell__ft_in-access" value='{{nam}}' ></input>
+            </view>
+      </view>
+
+      <view class="weui-cells weui-cells_after-title">
+            <view  class="weui-cell weui-cell_access" >
+                <view class="weui-cell__bd">性别</view>
+                <picker onChange='onchangesex' value='{{sexIndex}}' range='{{sex}}'>
+                <view class="weui-cell__ft weui-cell__ft_in-access">{{sex[sexIndex]}}</view>
+                </picker>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view  class="weui-cell weui-cell_access" >
+                <view class="weui-cell__bd">民族</view>
+                <picker onChange='onchangenation' value='{{nationIndex}}' range='{{nation}}'>
+                <view class="weui-cell__ft weui-cell__ft_in-access">{{nation[nationIndex]}}</view>
+                </picker>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view  class="weui-cell weui-cell_access" >
+                <view class="weui-cell__bd">出生年月</view>
+                <picker onChange="changeMultiPicker" mode = "date" value="{{date}}" start="1918-01-01" end="{{endtime}}">
+                <view class="weui-cell__ft weui-cell__ft_in-access">{{date}}</view>
+                </picker>
+            </view>
+        </view>
+         <view class="weui-cells weui-cells_after-title">
+            <view  class="weui-cell weui-cell_access" >
+                <view class="weui-cell__bd">现居城市</view>
+                 <input onBlur="citychange" class="weui-cell__ft weui-cell__ft_in-access" value='{{region}}' ></input>
+            </view>
+        </view>
+   
+  </view>
+  <view class='tar2'>
+        <view class="weui-cells weui-cells_after-title">
+            <view  class="weui-cell weui-cell_access" >
+                <view class="weui-cell__bd">手机号</view>
+                <input class="weui-cell__ft weui-cell__ft_in-access" onBlur="phonechage" value='{{phone}}'></input>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view  class="weui-cell weui-cell_access" >
+                <view class="weui-cell__bd">身份证号码</view>
+                <input class="weui-cell__ft weui-cell__ft_in-access"onBlur="Idnumchage" value='{{idnum}}'></input>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view  class="weui-cell weui-cell_access" >
+                <view class="weui-cell__bd">邮箱号</view>
+                <input class="weui-cell__ft weui-cell__ft_in-access" onBlur="emailchage" value='{{email}}'></input>
+            </view>
+        </view>
+  </view>
+  <view class='tar3'>
+  <view class='chuan'>添加个人照片</view>
+  <view class='chuan2'>
+        <view class="img_bd">
+             <view class="weui-uploader__files" id="uploaderFiles">
+                <block a:for="{{files}}" a:key="*this">
+                   <view class="weui-uploader__file" onTap="chooseImage" id="{{item}}">
+                         <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                     </view>
+                </block>
+                </view>
+               <view class="weui-uploader__input-box">
+               <view class="weui-uploader__input" onTap="chooseImage"></view>
+          </view>
+    </view>
+  </view>  
+  </view>
+  <view class='tar4'>
+    <button onTap='submit' style='background-color:#139AFF' ><text style='color:white'>保存</text></button>
+  </view>   
+</form>                       
+</view>

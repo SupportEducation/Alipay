@@ -1,109 +1,151 @@
 var app = getApp();
-var GetAllNews_url = app.appServlet.servlet + 'GetALLNewsServlet'; 
-
+var GetAllNews_url = app.appServlet.servlet+'GetALLNewsServlet'; 
 Page({
+
+  /**
+   * 页面的初始数据
+   */
   data: {
-    area: "北京",
-    array: null
+    area:"北京",
+    array:null
   },
-  onLoad(query) {
-    var that = this;
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad (options) {
+    var that=this;
+    //获取所有新闻
     my.httpRequest({
-      url: GetAllNews_url, // 目标服务器url
+      url: GetAllNews_url,
       method: 'GET',
-      headers: {
+      data: {
+      },
+      header: {
         'Content-Type': 'json'
       },
-      success: (res) => {
+      success (res) {
         var data = res.data;
         console.log(data);
         that.setData({
           array: res.data,
         })
       },
-    });
-  },
-  v4_1: function() {
-    var lx = "长期支教"
-    my.navigateTo({
-      url: "../program/program?&lx=" + lx
     })
   },
-  v4_2: function() {
+  v4_1(){
+    var lx = "长期支教"
+    my.navigateTo({
+      url: "../program/program?&lx=" +lx
+    })
+  },
+  v4_2 () {
     var lx = "短期支教"
     my.navigateTo({
       url: "../program/program?&lx=" + lx
     })
   },
-  v4_3: function() {
+  v4_3 () {
     my.navigateTo({
       url: '../program2/program2',
     })
   },
-  v4_4: function() {
+  v4_4 () {
     my.navigateTo({
       url: '../more/more',
     })
   },
-  v6_1: function(e) {
+  v6_1 (e) {
     var $data = e.currentTarget.dataset;
     console.log($data.id)
     my.navigateTo({
-      url: '../news/news?nid=' + $data.id,
+      url: '../news/news?nid='+$data.id,
     })
   },
-  v3_2: function() {
+  v3_2(){
     var lx = this.data.area
     my.navigateTo({
       url: '../switchcity/switchcity?lx=' + lx
     })
   },
-  onReady() {
-    // 页面加载完成
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady () {
+    var that = this;
+    my.getStorage({
+      key: 'city',
+      success (res) {
+        console.log(res.data)
+        that.setData({
+          area: res.data
+        })
+      }
+    })
+
   },
-  onShow() {
-    // 页面显示
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow () {
+    
   },
-  onHide() {
-    // 页面隐藏
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide () {
+    
   },
-  onUnload() {
-    // 页面被关闭
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload () {
+    
   },
-  onTitleClick() {
-    // 标题被点击
-  },
-  onPullDownRefresh() {
-    // 页面被下拉
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh () {
     my.showNavigationBarLoading() //在标题栏中显示加载
     var that = this;
+    //获取所有新闻
     my.httpRequest({
-      url: GetAllNews_url, // 目标服务器url
+      url: GetAllNews_url,
       method: 'GET',
-      headers: {
+      data: {
+      },
+      header: {
         'Content-Type': 'json'
       },
-      success: (res) => {
+      success (res) {
         var data = res.data;
         console.log(data);
         that.setData({
           array: res.data,
         })
-      },complete:() => {
+      },complete(){
         my.hideNavigationBarLoading() //完成停止加载
         my.stopPullDownRefresh() //停止下拉刷新
       }
-    });
+    })
   },
-  onReachBottom() {
-    // 页面被拉到底部
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom () {
+    
   },
-  onShareAppMessage() {
-    // 返回自定义分享信息
-    return {
-      title: 'My App',
-      desc: 'My App description',
-      path: 'pages/index/index',
-    };
-  },
-});
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage () {
+    
+  }
+  
+})

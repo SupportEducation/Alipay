@@ -1,5 +1,5 @@
-var authServlet = 'http://localhost:8080/TeacherSupport/AuthcodeServlet'
-
+// var authServlet = 'http://localhost:8080/TeacherSupport/AuthcodeServlet'
+var authServlet = 'https://www.bcuvote.top/TeacherSupport//AuthcodeServlet'
 App({
   onLaunch(options) {
     // 第一次打开
@@ -46,7 +46,7 @@ App({
     num: ''
   },
   appServlet: {
-     servlet: 'http://localhost:8080/TeacherSupport/'
-    // servlet: 'https://www.bcuvote.top/TeacherSupport/'
+    //  servlet: 'http://localhost:8080/TeacherSupport/'
+    servlet: 'https://www.bcuvote.top/TeacherSupport/'
   }
 });

@@ -1,3 +1,4 @@
 {
-  "titleBarTextStyle": "white"
+  "pullRefresh": true,
+  "titleBarColor": "white"
 }

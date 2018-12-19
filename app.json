@@ -1,13 +1,38 @@
 {
   "pages": [
+    
     "pages/userinfo/userinfo",
     "pages/index/index",
+    "pages/myzan/myzan",
+    "pages/friends/friends",
+    "pages/myindex/myindex",
+    "pages/myactivity/myactivity",
+    "pages/otherindex/otherindex",
     "pages/look/look",
-    "pages/my/my",
-    "pages/news/news",
-    "pages/switchcity/switchcity",
+    "pages/attention/attention",
+    "pages/fans/fans",
+    "pages/release/release",
+    "pages/myprogram/myprogram",
     "pages/program/program",
-    "pages/program2/program2"
+    "pages/program2/program2",
+    "pages/switchcity/switchcity",
+    "pages/search/search",
+    "pages/detail/detail",
+    "pages/creat/creat",
+    "pages/teach/teach",
+    "pages/contact/contact",
+    "pages/work/work",
+    "pages/name/name",
+    "pages/my/my",
+    "pages/logs/logs",
+    "pages/question/question",
+    "pages/news/news",
+    "pages/share/share",
+    "pages/resume/resume",
+    "pages/more/more",
+    "pages/story/story",
+    "pages/organization/organization"
+  
   ],
   "window": {
     "titleBarColor": "#139aff",
@@ -36,8 +61,8 @@
       {
         "pagePath": "pages/my/my",
         "icon": "pages/images/tar3.png",
-        "activeIcon": "pages/images/tar3_3.png",
-        "name": "我的"
+        "name": "我的",
+        "activeIcon": "pages/images/tar3_3.png"
       }
     ]
   }

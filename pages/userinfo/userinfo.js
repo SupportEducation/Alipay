@@ -1,7 +1,7 @@
 Page({
   onLoad(query) {
     // 页面加载
-  
+
   },
   onReady() {
     // 页面加载完成

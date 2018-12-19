@@ -31,7 +31,7 @@ function pushCity() {
 
 }
 
-module.exports = {
+export default {
     searchLetter: searchLetter,
     cityList: cityList
 }

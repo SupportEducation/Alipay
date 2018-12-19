@@ -1,0 +1,4 @@
+<!--pages/share/share.wxml-->
+<canvas class='canvass' id="firstCanvas"></canvas>
+<button  onTap='changeback' class='share'>更换背景</button>
+<button onTap='share' class='backimg'>立即分享</button>

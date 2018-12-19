@@ -3,6 +3,8 @@ page {
   display: flex;
   background: #f7f7f7;
 }
+
+/**app.wxss**/
 @import './weui.acss'; 
 .container {
   height: 100%;
