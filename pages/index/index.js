@@ -36,7 +36,8 @@ Page({
   v4_1(){
     var lx = "长期支教"
     my.navigateTo({
-      url: "../program/program?&lx=" +lx
+      url: "../program/program?&lx=" +lx,
+      backgroundColor:'#139AFF'
     })
   },
   v4_2 () {

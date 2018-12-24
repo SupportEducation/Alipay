@@ -1,10 +1,10 @@
-<view class='body' style='width:100%'>
+<view class='body'>
   <view class='img_phone'>
     <image src='../images/log_phone.png' style='width:699rpx;height:352rpx'></image>
   </view>
-  <view class='img_text'>
-    <image src='../images/log_text.png' style='width:373rpx;height:128rpx' ></image>
-  </view>
+<view class='img_text'>
+  <image src='../images/log_text.png' style='width:373rpx;height:128rpx' ></image>
+</view>
   <view class='img_cloud'>
     <image src='../images/log_cloud.png' style='width:750rpx;height:535rp;'></image>
   </view>

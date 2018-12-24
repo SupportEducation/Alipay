@@ -2,8 +2,10 @@
 page{
   background: linear-gradient(#d8f0fc, #4dceff);
   position: fixed;
+  width: 100%;
 }
 .body{
+  width: 100%;
   flex-direction: column;
 }
 .img_phone{

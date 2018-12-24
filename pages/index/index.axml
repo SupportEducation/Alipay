@@ -3,8 +3,11 @@
         <view class='bgview' onTap='v3_2'>
             <image src='../images/area.png' class='img2'></image>
             <text class='text1'>{{area}}</text>
+        </view>      
+        <view class='input'>
+          <text class="inputpla">搜索</text>
         </view>
-        <input class='input' placeholder='搜索' placeholder-class='inputpla'></input>
+        <!-- <input class='input' placeholder='搜索' placeholder-class='inputpla' style=" border-radius: 40rpx;"></input> -->
     </view>
     <view class='view5'>
         <view class='view4'>

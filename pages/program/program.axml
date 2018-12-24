@@ -12,14 +12,14 @@
     <view class="weui-navbar">
       <block a:for="{{tabs}}" a:key="*this">
         <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" onTap="tabClick">
-          <view class="weui-navbar__title">{{item}}
+          <view class="weui-navbar__title" style="margin-top:17rpx;">{{item}}
             <image class='im' src="../images/xj{{activeIndex == index ? '2' : ''}}.png"></image>
           </view>
         </view>
       </block>
     </view>
     <!--隐藏部分  -->
-    <view class="weui-tab__pane">
+    <view class="weui-tab__pane"  style="width:100%">
       <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
         <view class='adr' hidden='{{!actionSheetHidden}}' onChange="actionSheetonChange">
           <view class="searchLetter touchClass">
@@ -30,7 +30,7 @@
               {{showLetter}}
             </view>
           </block>
-          <scroll-view scroll-y="true" style="height:{{winHeight}}px" onscroll="onScroll" scroll-into-view="{{scrollTopId}}" scroll-top="{{scrollTop}}">
+          <scroll-view scroll-y="true" style="height:{{winHeight}}px;width:400px;" onscroll="onScroll" scroll-into-view="{{scrollTopId}}" scroll-top="{{scrollTop}}">
             <view class="hotcity-common thisCity">当前选择城市</view>
             <view class="thisCityName">{{city}}</view>
             <view>
