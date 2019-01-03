@@ -1,4 +1,4 @@
-<view class='page'>
+<view style="width: 100%">
   <view class='body'>
     <!--搜索-->
     <navigator url='../search/search'>
@@ -8,11 +8,11 @@
         </view>
       </view>
     </navigator>
-    <view class="page">
+    <view class="">
       <view class="page__bd">
         <view class="weui-tab">
           <view class="weui-tab__pane">
-                <view class='view6_1' a:for="{{array}}" a:key='' onTap='v6_1' onTap='onor' data-oid='{{item.oid}}'>
+                <view class='view6_1' a:for="{{array}}" a:key='' onTap='v6_1' data-oid='{{item.oid}}'>
                   <view class='detail1_bar'>
                     <view class='detail_text'>{{item.or_name}}</view>
                     <view class='detail_text2'>

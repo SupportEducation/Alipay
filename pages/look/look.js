@@ -71,27 +71,26 @@ Page({
           var data = res.data;
           console.log(data);
           if (data == '[false]') {
-            my.confirm({
+            my.alert({
               title: '提示',
               content: '点赞失败！',
-              showCancel: false
+              buttonText: '确定',
             })
           } else if (data == 'again') {
-            my.confirm({
+            my.alert({
               title: '提示',
               content: '已点赞该用户！',
-              showCancel: false
+              buttonText: '我知道了',
             })
           }
           else {
-            my.confirm({
+            my.alert({
               title: '提示',
               content: '点赞成功！',
-              showCancel: false
+              buttonText: '确定',
             })
             
             my.httpRequest({
-
               url: GetAllStory_url,
               method: 'GET',
               data: {

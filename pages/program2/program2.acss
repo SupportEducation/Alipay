@@ -1,13 +1,17 @@
 /* pages/program/program.wxss */
-
+page{
+  width: 100% ! important;
+}
 .body{
  flex-direction: column;
+ width: 100% ! important;
 }
 .top{
   height: 100rpx;
   display: flex;
   flex-direction: row;
   background-color: #139AFF;
+  width: 100%;
 }
 .im{
 padding-left: 5rpx;

@@ -62,6 +62,7 @@ Page({
     })
   },
   v6_1 (e) {
+    console.log("跳转了");
     var $data = e.currentTarget.dataset;
     my.navigateTo({
       url: '../detail/detail?rid=' + $data.id+'&oid='+$data.oid,

@@ -51,17 +51,17 @@
             <view class="flex_box">
               <view class="flex_item">
                 <label class="{{radioCheckVal==1?'active':''}}">长期支教
-                  <radio value="1" hidden="true"></radio>
+                  <radio value="1" style="display:none"></radio>
                 </label>
               </view>
               <view class="flex_item">
                 <label class="{{radioCheckVal==2?'active':''}}">短期支教
-                  <radio value="2" hidden="true"></radio>
+                  <radio value="2" style="display:none"></radio>
                 </label>
               </view>
               <view class="flex_item">
                 <label class="{{radioCheckVal==3?'active':''}}">其他支教
-                  <radio value="3" hidden="true"></radio>
+                  <radio value="3" style="display:none"></radio>
                 </label>
               </view>
             </view>
@@ -72,7 +72,7 @@
         <view class='adr3' hidden='{{!actionSheetHidden}}' onChange="actionSheetonChange">
           <view class='detail4_bar' a:for="{{organization}}" a:key='' onTap='goback' data-oid='{{item.oid}}'>
             <label>{{item.or_name}}</label>
-            <radio hidden="true"></radio>
+            <radio style="display:none"></radio>
           </view>
         </view>
 

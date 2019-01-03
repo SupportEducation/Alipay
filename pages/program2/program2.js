@@ -24,7 +24,7 @@ Page({
       },
     })
   },
-  bindor (e) {
+  v6_1 (e) {
     var $data = e.currentTarget.dataset;
     my.navigateTo({
       url: '../organization/organization?oid='+$data.oid,

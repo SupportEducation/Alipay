@@ -1,8 +1,12 @@
-
+page{
+  display: flex;
+  flex-direction: column;
+}
 .wxSearch-section{
   background-color: #62ccff;
   height: 30px;
   padding: 5px 10px;
+  width: 95%;
 }
 .wxSearch-pancel{
   display: flex;

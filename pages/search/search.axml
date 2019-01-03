@@ -11,7 +11,7 @@
             </view>
         </view>
 
-        <view class="wxSearchKey" style="display:{{wxSearchData.view.isShowSearchKey ? 'block':'none'}}">
+        <view class="wxSearchKey" style="width:100%;display:{{wxSearchData.view.isShowSearchKey ? 'block':'none'}}">
         </view>
         <view class="wxSearchHistory" style="display:{{wxSearchData.view.isShowSearchHistory ? 'block':'none'}}">
             <text class="wxSearchTitle">搜索历史</text>

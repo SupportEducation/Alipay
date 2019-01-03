@@ -303,7 +303,6 @@ view7_2{
 }
 .detail4_bar{
   height: 100rpx;
-  background: white;
   float: left;
   margin-left: 25rpx;
 }
