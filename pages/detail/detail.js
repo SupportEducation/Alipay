@@ -24,7 +24,7 @@ Page({
   },
   actionSheetbindchange () {
     this.setData({
-      actionSheetHidden: !this.data.actionSheetHidden
+      actionSheetHidden: true
     })
   },
 tj(){
@@ -35,8 +35,8 @@ tj(){
   my.confirm({
     title: '确认提交',
     content: '您确定申请报名么？',
-    showCancel: true,
-    confirmText: '确定',
+    confirmButtonText: '确定',
+    cancelButtonText:"取消",
     confirmColor: '#72B9C3',
     success (res) {
       if (res.confirm) {
@@ -100,7 +100,7 @@ onLoad (options) {
         });
       }
     })
-    this.setData({
+    that.setData({
       rid: options.rid,
       oid:options.oid
     })

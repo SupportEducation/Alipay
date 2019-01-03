@@ -1,6 +1,4 @@
 {
    "defaultTitle": "看一看",
-    "navigationBarBackgroundColor": "#fff",
-    "titleBarColor": "black",
-    "backgroundColor": "#f3f5f9"
+    "navigationBarBackgroundColor": "#fff"
 }

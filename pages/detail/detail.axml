@@ -1,5 +1,5 @@
 <view class="pages">
-    <view class="pages__bd">
+    <view class="pages__bd"  onTap="actionSheetbindchange">
         <view class="weui-tab">
             <view class="weui-navbar" style='padding-top:0rpx'>
                 <block a:for="{{tabs}}" a:key="*this">
@@ -63,14 +63,14 @@
         </view>
     </view>
 </view>
-	<action-sheet hidden="{{actionSheetHidden}}" onChange="actionSheetonChange">
-                    	<view class='radiogroup'>
-                      	<radio-group onChange="radioCheckedChange">
-                              <image src='../images/tj.png' class='img1' onTap='tj'></image>
-                              <image src='../images/xg.png' class='img2' onTap='xg'></image>
-                    	</radio-group>
-                      </view>
-                	</action-sheet>
-                <view class='viewButton' hidden='{{activeIndex != 0}}'>
-     				<button class='button' hover-class='button-hover' onTap="actionSheetTap" >申请报名</button>
-             	</view>
+	<view hidden="{{actionSheetHidden}}" onTap="actionSheetbindchange" class="bottom-sheet">
+    <view class='radiogroup'>
+      <radio-group onChange="radioCheckedChange">
+            <image src='../images/tj.png' class='img1' onTap='tj'></image>
+            <image src='../images/xg.png' class='img2' onTap='xg'></image>
+      </radio-group>
+    </view>
+  </view>
+  <view class='viewButton' hidden='{{activeIndex != 0}}'>
+    <button class='button' hover-class='button-hover' onTap="actionSheetTap" >申请报名</button>
+  </view> 
