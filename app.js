@@ -5,6 +5,9 @@ App({
     // 第一次打开
     options.query == {number:1}
     const that = this;
+        //  my.switchTab({
+        //       url: '../index/index'
+        //       })
     my.getAuthCode({
       scopes: 'auth_user',
       success: (res) => {
@@ -20,9 +23,9 @@ App({
               // that.setData({})
               that.appuserinfo.username = res.data[0].username;
               that.appuserinfo.aid = res.data[0].aid;
-              my.switchTab({
-                url: '../index/index'
-              })
+              // my.switchTab({
+              //   url: '../index/index'
+              // })
             },
             fail:() => {
               my.alert({
