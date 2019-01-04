@@ -254,3 +254,13 @@
     border-radius: 50%;
     z-index: 10;
 }/* pages/otherindex/otherindex.wxss */
+
+.swiperitem{
+  margin-top: 480rpx;
+}
+.zanimg{
+  height:29rpx;
+  width:12rpx;
+  padding-right:30rpx;
+  margin-right: 30rpx;
+}

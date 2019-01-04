@@ -44,23 +44,23 @@
         <view class='radio1'>
             <label class="{{radioCheckVal==0?'active':''}}">
                 <text class='text'>足迹</text>
-                <radio value="0" hidden="true"></radio>
+                <radio value="0" style="display:none"></radio>
             </label>
         </view>
         <view class='radio1'>
             <label class="{{radioCheckVal==1?'active':''}}">
                 <text class='text'>故事</text>
-                <radio value="1" hidden="true"></radio>
+                <radio value="1" style="display:none"></radio>
             </label>
         </view>
     </radio-group>
     </view>
     <!--第二滚动部分 -->
     
-    <swiper current="{{radioCheckVal}}" style="height:{{winHeight*2-296}}rpx; " class="swiper-box" duration="300" onChange="onChange">
+    <swiper current="{{radioCheckVal}}" style="height:{{winHeight*2}}rpx; " class="swiper-box" duration="300" onChange="onChange">
         <!-- 足迹 -->
-        <swiper-item>
-            <scroll-view scroll-y="true" style='height:{{winHeight*2-296}}rpx'>
+        <swiper-item class="swiperitem">
+            <scroll-view scroll-y="true" style='height:{{winHeight*2}}rpx'>
                 <view class='view2_2_1' a:for="{{program}}" a:for-index="index">
                     <view class='view2_2_1_l'>
                         <text style="font-size:48rpx;">{{item.time.date}}</text>
@@ -89,8 +89,8 @@
             </scroll-view>
         </swiper-item>
         <!-- 故事 -->
-        <swiper-item>
-            <scroll-view scroll-y="true" style='height:{{winHeight-200}}px'>
+        <swiper-item class="swiperitem">
+            <scroll-view scroll-y="true" style='height:{{winHeight}}px'>
                 <view class='v4' a:for="{{program2}}">
                     <view class='v4_1'>
                         <view class='v4_1_1'>
@@ -105,11 +105,11 @@
                         <image src='https://www.bcuvote.top/TeacherSupport/upload/{{item.s_img}}' class='images5'></image>
                     </view>
                     <view class='v4_3'>
-                        <view style='font-size:30rpx;color:#696969;'>{{item.s_title}}</view>
+                        <view style='font-size:30rpx;color:#696969;padding-left: 18rpx;'>{{item.s_title}}</view>
                     </view>
                     <view class='v4_4'>
                         <view style='font-size:24rpx;color:#5da0fb;padding-left: 34rpx;'>{{item.s_place}}</view>
-                        <image src='../images/dz.png' style='height:29rpx;width:29rpx; padding-right:30rpx;'></image>
+                        <image src='../images/dz.png' class="zanimg"></image>
                     </view>
                 </view>
             </scroll-view>

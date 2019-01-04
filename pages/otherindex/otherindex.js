@@ -31,9 +31,9 @@ Page({
     zjnum: 0,
     radioCheckVal: 0,
     open: false,
-    //program 为足迹数据
+    // //program 为足迹数据
     program: null,
-    //program2 为故事数据
+    // //program2 为故事数据
     program2: null,
     height: null,
     //个人资料
@@ -76,6 +76,9 @@ Page({
   },
   onLoad (options) {
     var that = this;
+    my.setNavigationBar({
+      backgroundColor: "#139AFF",
+    });
     var a_id=options.a_id;
     my.httpRequest({
       url: GetByFollow_url,
