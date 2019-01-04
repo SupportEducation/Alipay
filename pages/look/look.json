@@ -1,4 +1,5 @@
 {
    "defaultTitle": "看一看",
-    "navigationBarBackgroundColor": "#fff"
+    "navigationBarBackgroundColor": "#fff",
+    "pullRefresh":true
 }

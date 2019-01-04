@@ -276,9 +276,119 @@ Page({
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh () {
+  onPullDownRefresh () {
+    my.showNavigationBarLoading() //在标题栏中显示加载
+    var that = this;
+    my.httpRequest({
+          url: GetByFollow_url,
+          method: 'GET',
+          data: {
+            aaid: app.appuserinfo.aid
+          },
+          header: {
+            'Content-Type': 'json'
+          },
+          success (res) {
+            var data = res.data;
+            console.log(data);
+            that.setData({
+              fsnum: data
+            })
+          },
+        })
+        my.httpRequest({
+          url: getFollow_url,
+          method: 'GET',
+          data: {
+            aid: app.appuserinfo.aid
+          },
+          header: {
+            'Content-Type': 'json'
+          },
+          success (res) {
+            var data = res.data;
+            console.log(data);
+            that.setData({
+              gznum: data
+            })
+          },
+        })
+        my.httpRequest({
+          url: GetFollowSum_url,
+          method: 'GET',
+          data: {
+            aid: app.appuserinfo.aid
+          },
+          header: {
+            'Content-Type': 'json'
+          },
+          success (res) {
+            var data = res.data;
+            console.log(data);
+            that.setData({
+              cznum: data
+            })
+          },
+        })
+        my.httpRequest({
+          url: GetmyRecruitNum_url,
+          data: {
+            aid: app.appuserinfo.aid
+          },
+          header: {},
+          method: 'GET',
+          success (res) {
+            var data = res.data;
+            console.log(data);
+            that.setData({
+              zjnum: data,
+            })
+          },
+          fail (res) { },
+          complete (res) { },
+        })
+        //获取个人故事
+        my.httpRequest({
+          url: GetOneUserStory_url,
+          method: 'GET',
+          data: {
+            aid: app.appuserinfo.aid
+          },
+          header: {
+            'Content-Type': 'json'
+          },
+          success (res) {
+            var data = res.data;
+            console.log(data);
+            that.setData({
+              program2: data
+            })
+          },
+        })
 
-    },
+        //获取个人足迹
+        my.httpRequest({
+          url: GetAllFfootprint_url,
+          method: 'GET',
+          data: {
+            aid: app.appuserinfo.aid
+          },
+          header: {
+            'Content-Type': 'json'
+          },
+          success (res) {
+            var data = res.data;
+            console.log(data);
+            that.setData({
+              program: data
+            })
+          },
+          complete(){
+            my.hideNavigationBarLoading() //完成停止加载
+            my.stopPullDownRefresh() //停止下拉刷新
+          }
+        })
+  },
 
     /**
      * 页面上拉触底事件的处理函数

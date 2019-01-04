@@ -287,7 +287,47 @@ Page({
         })
       },
     })
-  },
-    
-  
+  },  
+  onPullDownRefresh () {
+    my.showNavigationBarLoading() //在标题栏中显示加载
+    var that = this;
+    my.httpRequest({
+          url: GetOneUserCollection_url,
+          method: 'GET',
+          data: {
+            aid: app.appuserinfo.aid
+          },
+          header: {
+            'Content-Type': 'json'
+          },
+          success (res) {
+            var data = res.data;
+            console.log(data);
+            that.setData({
+              array: res.data,
+            })
+          },
+        })
+    my.httpRequest({
+     
+      url: GetAllStory_url,
+      method: 'GET',
+      data: {
+        aid: app.appuserinfo.aid
+      },
+      header: {
+        'Content-Type': 'json'
+      },
+      success (res) {
+        var data = res.data;
+        console.log(data);
+        that.setData({
+          array1: res.data,
+        })
+      },complete(){
+        my.hideNavigationBarLoading() //完成停止加载
+        my.stopPullDownRefresh() //停止下拉刷新
+      }
+    })
+  }
 })    

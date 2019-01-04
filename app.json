@@ -35,10 +35,10 @@
   ],
   "window": {
     "titleBarColor": "#139aff",
-    "pullRefresh":true,
     "backgroundTextStyle": "light",
     "navigationBarTextStyle": "white",
-    "backgroundColor": "#139aff"
+    "backgroundColor": "#139aff",
+    "pullRefresh":false
   },
   "tabBar": {
     "textColor": "#919799",

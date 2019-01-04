@@ -23,9 +23,9 @@ App({
               // that.setData({})
               that.appuserinfo.username = res.data[0].username;
               that.appuserinfo.aid = res.data[0].aid;
-              // my.switchTab({
-              //   url: '../index/index'
-              // })
+              my.switchTab({
+                url: '../index/index'
+              })
             },
             fail:() => {
               my.alert({
