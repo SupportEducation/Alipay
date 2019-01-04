@@ -1,4 +1,10 @@
-
+page{
+  background:#fff;
+  width: 100%;
+}
+.all{
+  width: 100%;
+}
 .body{
   flex-direction: column;
   width: 100%;

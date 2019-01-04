@@ -1,6 +1,8 @@
 /* pages/myprogram/myprogram.wxss */
 /* pages/program/program.wxss */
-
+.page{
+width: 100%;
+}
 .body{
  flex-direction: column;
 }

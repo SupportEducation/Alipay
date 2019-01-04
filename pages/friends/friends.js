@@ -12,8 +12,8 @@ Page({
     friends:null,
     actionSheetHidden: true,
     actionSheetItems: ['确定', '取消'],
-    aaid: null
-   
+    aaid: null,
+    
   },
   //弹出和删除
   actionSheetTap (e) {

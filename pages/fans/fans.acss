@@ -3,6 +3,9 @@
 page{
   background-color: #F3F5F9;
 }
+.pages{
+  width: 100%;
+}
 .body{
   box-shadow: inset 0px 2rpx 8rpx #eeeeee;
   flex-direction: column;
@@ -26,11 +29,12 @@ display: flex;
   margin-top: 32rpx;
   position: relative;
   margin-left: 20rpx;
+  width: 35%;
 }
 
 .friend_attention{
   position: relative;
-  margin-left: 170rpx;
+  margin-left: 150rpx;
    flex-direction: column;
    padding-top: 20rpx;
 }

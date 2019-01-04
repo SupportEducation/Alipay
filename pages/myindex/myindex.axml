@@ -10,7 +10,7 @@
                 <text style="font-size:36rpx;">{{userInfo.nickName}}</text>
             </view>
             <view class='view1_2_1_r'>
-                <image src='{{userInfo.avatarUrl}}' class='image2'></image>
+                <image src='{{userInfo.avatar}}' class='image2'></image>
             </view>
         </view>
         <view class='view1_2_2'>
@@ -43,13 +43,13 @@
     <view class='radio1'>
         <label class="{{radioCheckVal==0?'active':''}}">
             <text class='text'>足迹</text>
-            <radio value="0" hidden="true"></radio>
+            <radio value="0" style="display:none"></radio>
         </label>
     </view>
     <view class='radio1'>
         <label class="{{radioCheckVal==1?'active':''}}">
             <text class='text'>故事</text>
-            <radio value="1" hidden="true"></radio>
+            <radio value="1" style="display:none"></radio>
         </label>
     </view>
 </radio-group>

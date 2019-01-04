@@ -76,9 +76,17 @@ width: 100%;
 .display_none {
     display: none;
 }
+.zanimg{
+  height:29rpx;
+  width:12rpx;
+  padding-right:30rpx;
+  margin-right: 30rpx;
+}
 .newview{
     height: 109rpx;
     width: 109rpx;
     border-radius: 50%;
     z-index: 10;
+    
 }
+

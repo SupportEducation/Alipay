@@ -1,5 +1,5 @@
 <!--pages/attention/attention.wxml-->
-<view class='page'>
+<view class='pages'>
   <view class='body'>
   <view class='friend'  a:for="{{friends}}" a:key='this'>
         <view class='friend_top'>

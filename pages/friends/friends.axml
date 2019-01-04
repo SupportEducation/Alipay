@@ -1,6 +1,6 @@
 <!--pages/friends/friends.wxml-->
-<view class='page'>
-  <view class='body'>
+<view class='pages'>
+  <view class="body" >
       <view class='friend'  a:for="{{friends}}" a:key='' >
       <view class='friend_top'>
           <view class='friend_img'><image src='{{item.headimg}}'></image></view>
@@ -15,12 +15,14 @@
         </view>
           <view class='xian'></view>
       </view>
-    <action-sheet hidden="{{actionSheetHidden}}" onTap="actionSheetChange1">
+    <view hidden="{{actionSheetHidden}}" onTap="actionSheetChange1" class="acction">
     <view class='queren'>确定不再关注此人？</view>
-    <block a:for="{{actionSheetItems}}">
-        <action-sheet-item class="items" onTap="actionSheetChange" data-id='{{item.aaid}}' data-index="{{index}}">{{actionSheetItems[index]}}</action-sheet-item>
-    </block>
-</action-sheet>
+      <block a:for="{{actionSheetItems}}">
+          <view class="items" onTap="actionSheetChange" data-id='{{item.aaid}}' data-index="{{index}}">
+            {{actionSheetItems[index]}}
+          </view>
+      </block>
+    </view>
 
 </view>
 </view>

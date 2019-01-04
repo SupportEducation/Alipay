@@ -68,23 +68,23 @@ Page({
           var data = res.data;
           console.log(data);
           if (data == '[false]') {
-            my.confirm({
+            my.alert({
               title: '提示',
               content: '关注失败！',
-              showCancel: false
+              buttonText: '确定',
             })
           } else if (data == 'again') {
-            my.confirm({
+            my.alert({
               title: '提示',
               content: '以关注该用户！',
-              showCancel: false
+              buttonText: '确定',
             })
           }
           else {
-            my.confirm({
+            my.alert({
               title: '提示',
               content: '关注成功！',
-              showCancel: false
+              buttonText: '确定',
             })
           }
         },

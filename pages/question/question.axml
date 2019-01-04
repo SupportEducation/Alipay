@@ -1,13 +1,14 @@
 <!--pages/question/question.wxml-->
-<form onSubmit='formsubmit'>
-<view class='page'>
+<form onSubmit='formsubmit' style="width:100%">
+<view class='pages'>
   <view class='body'>
     <view class='title'><input placeholder='请输入要反馈的问题' name='q_title'></input></view>
     <view class='xian'></view>
     <view class='msg'>
+      <!-- <text class="MaxdNumber">{{MaxdNumber|0}}/{{max}}</text>  -->
       <textarea placeholder='您有哪些问题' name='q_content' maxlength='1000' onInput="inputs">
       <!--默认字数多少-->
-          <text class="MaxdNumber">{{MaxdNumber|0}}/{{max}}</text> 
+         
       </textarea>
     </view>
     <view class='pictures'>
@@ -30,7 +31,7 @@
   </view>
 
   <view class='viewButton'>
-     		<button class='button'formType='submit'  hover-class='button-hover'  >提交反馈</button>
+     		<button class='button'formType='submit'  hover-class='button-hover' class="tjbtn" >提交反馈</button>
 	</view>
 </view>
 </form>

@@ -17,7 +17,7 @@
     <!--联系方式-->
     <view class='contact'>
     <view class='contact1'><text>联系方式</text></view>
-    <view class='contact2'><text>{{name.workaddress}}\n家庭住址:\t\t{{name.homeaddress}}\n紧急联系人:\t\t{{name.emergancyrelationship}}\n紧急联系电话:\t\t{{name.emergancycontact}}</text></view><view class='contact3'><image onTap='changeTocontact' src='../images/c3.png' class='image3'></image></view>
+    <view class='contact2'><text>{{name.workaddress}}\n家庭住址:{{name.homeaddress}}\n紧急联系人:{{name.emergancyrelationship}}\n紧急联系电话:{{name.emergancycontact}}</text></view><view class='contact3'><image onTap='changeTocontact' src='../images/c3.png' class='image3'></image></view>
     </view>
     <!--工作经历-->
    <view class='work'>
@@ -26,7 +26,7 @@
         </view>
         <!-- <image onTap='changeTowork' src='../images/c4.png'></image> -->
         <view class='work2'>
-          <text>支教项目:\t\t{{work.activityname}}\n组织名称:\t\t{{work.organizationname}}\n活动地点:\t\t{{work.teaplace}}</text>
+          <text>支教项目:{{work.activityname}}\n组织名称:{{work.organizationname}}\n活动地点:{{work.teaplace}}</text>
         </view>
         <view class='contact4'>
           <image onTap='changeTocontact2' src='../images/c3.png' class='image3'></image>

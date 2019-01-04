@@ -115,6 +115,9 @@ Page({
   },
   onLoad () {
     var that = this;
+    my.setNavigationBar({
+      backgroundColor: "#fff",
+    });
     /**  
      * 获取系统信息  
      */
@@ -201,10 +204,10 @@ Page({
     var aaid = event.currentTarget.dataset.aaid;
     if (aaid == app.appuserinfo.aid)
     {
-      my.confirm({
+      my.alert({
         title: '提示',
         content: '不能关注自己！',
-        showCancel: false
+        buttonText: "确定"
       })
     }
     else{
@@ -223,23 +226,23 @@ Page({
           console.log(data);
           if(data=='[false]')
           {
-            my.confirm({
+            my.alert({
               title: '提示',
               content: '关注失败！',
-              showCancel: false
+              buttonText: "确定"
             })
           }else if(data=='again'){
-            my.confirm({
+            my.alert({
               title: '提示',
               content: '已关注该用户！',
-              showCancel: false
+              buttonText: "确定"
             })
           }
           else{
-            my.confirm({
+            my.alert({
               title: '提示',
               content: '关注成功！',
-              showCancel: false
+              buttonText: "确定"
             })
           }
         },  

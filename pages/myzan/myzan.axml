@@ -13,11 +13,11 @@
                         <image src='https://www.bcuvote.top/TeacherSupport/upload/{{item.s_img}}' class='images5'></image>
                     </view>
                     <view class='v4_3'>
-                        <view style='font-size:30rpx;color:#696969;'>{{item.s_title}}</view>
+                        <view style='font-size:30rpx;color:#696969;padding-left: 18rpx;'>{{item.s_title}}</view>
                     </view>
                     <view class='v4_4'>
                         <view style='font-size:24rpx;color:#5da0fb;padding-left: 34rpx;'>{{item.s_place}}</view>
-                        <image src='../images/dz.png' style='height:29rpx;width:29rpx; padding-right:30rpx;'></image>
+                        <image src='../images/dz.png' class="zanimg"></image>
                     </view>
                 </view>
 </view>

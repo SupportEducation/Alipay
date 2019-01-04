@@ -3,6 +3,9 @@
 page{
   background-color: #F3F5F9;
 }
+.pages{
+  width: 100%;
+}
 .body{
   box-shadow: inset 0px 2rpx 10rpx #eeeeee;
   flex-direction: column;
@@ -18,7 +21,8 @@ letter-spacing: 5rpx;
 color: #888888;
 }
 .xian{
-  border-top:0.3rpx solid #E7E7E7;
+  height: 1rpx;
+  background-color: #E7E7E7;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -78,16 +82,18 @@ color: #888888;
   position: fixed;
   bottom: 0;
   letter-spacing: 10rpx;
+  text-align: center;
 }
 .button {
   width: 80%;
   height: 70rpx;
-  margin-top: 16rpx;
+  line-height: 70rpx;
+  margin: 16rpx auto 0rpx auto;
   display: flex;
   justify-content: center; 
   color: white;
   font-size: 28rpx;
-  border-radius: 5rpx;
+  border-radius: 15rpx;
   background-color: #139AFF;
   box-shadow: 0rpx 0rpx 10rpx #139AFF;
 }
